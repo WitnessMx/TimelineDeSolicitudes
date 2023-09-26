@@ -1,8 +1,8 @@
 const staticDevCoffee = "SolTimeline";
 const assets = [
-  "/",
-  "/index.html",
-  "/js/app.js",
+  "/TimelineDeSolicitudes/",
+  "/TimelineDeSolicitudes/index.html",
+  "/TimelineDeSolicitudes/js/app.js",
 ];
 
 self.addEventListener("install", installEvent => {
