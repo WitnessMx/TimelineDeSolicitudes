@@ -1,0 +1,16 @@
+{
+  "name": "Linea de Tiempo de Solicitudes",
+  "short_name": "TimeLineSolicitudes",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#fdfdfd",
+  "theme_color": "#db4938",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/imagenes/iconos/sol.png",
+      "type": "image/png",
+      "sizes": "150x150"
+    }
+  ]
+}
