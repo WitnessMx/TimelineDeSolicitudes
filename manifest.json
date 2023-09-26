@@ -8,7 +8,7 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/imagenes/iconos/sol.png",
+      "src": "/TimelineDeSolicitudes/imagenes/iconos/sol.png",
       "type": "image/png",
       "sizes": "150x150"
     }
