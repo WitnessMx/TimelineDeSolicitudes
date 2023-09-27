@@ -67,8 +67,14 @@ function og(){return og=Object.assign||function(t){for(var e=1;e<arguments.lengt
 
     </script>
     <style>
+   html{
+            overflow-x: hidden;
+            max-width: 100%;
+        }
         body{
             background-color: rgb(203 227 228);
+            overflow-x: hidden;
+            max-width: 100%;
         }
         .vis-item.vis-range {
             border-radius: 3px;
@@ -132,8 +138,11 @@ function og(){return og=Object.assign||function(t){for(var e=1;e<arguments.lengt
             border-radius: 5px;
             font-size: 13pt;
             width: 100%;
+      
            
         }
+  
+
         .tabla-item1.class-completo td{
             background-color: rgb(186, 248, 170);
         }
@@ -146,12 +155,18 @@ function og(){return og=Object.assign||function(t){for(var e=1;e<arguments.lengt
 
         .tabla-item1.class-completo {
             background-color: rgb(217, 250, 209);
+         
+
         }
         .tabla-item1.class-proceso {
             background-color: rgb(255, 242, 219);
+         
+
         }
         .tabla-item1.class-cancelado {
             background-color: rgb(250, 250, 250);
+         
+
         }
         .tabla-item1 tr{
             background-color: rgb(255, 221, 157);
@@ -160,13 +175,17 @@ function og(){return og=Object.assign||function(t){for(var e=1;e<arguments.lengt
             background-color: rgb(255, 213, 46);
             border-radius: 2px;
             padding: 5px;
+            overflow-x: scroll;
+            max-width: 1;
         }
-
+        .botones{
+            padding:4px;
+        }
     </style>
 
 </head>
 <body>
-    <div><input type="button" id="Envivo" value="Ahora"></div>
+    <div class="botones"><input type="button" id="Envivo" value="Fecha Actual"> <input type="button" id="Recargar" value="Recargar Pagina"></div>
     <div id="visualizacion" ></div>
 
     <div id="item-visual">
@@ -319,9 +338,9 @@ var timeline = new vis.Timeline(contenedor1);
                 var options={
                     groupOrder: 'content',// groupOrder can be a property name or a sorting function
                     orientation: {axis: 'top'},
-                    maxHeight: 400,
-                    minHeight:250,
-                    zoomMin: 1000 * 60 * 60 *12 ,            // one day in milliseconds
+                    maxHeight: 450,
+                    minHeight:450,
+                    zoomMin: 1000 * 60 *60*6 ,            // one day in milliseconds
                     zoomMax: 1000 * 60 * 60 * 24 * 31 * 12*24,
                     verticalScroll: true,
                     //zoomKey: 'ctrlKey'
@@ -420,6 +439,9 @@ var timeline = new vis.Timeline(contenedor1);
         document.getElementById("form_estatus").value=e.target.value;
     })
 
+    document.getElementById("Recargar").addEventListener('click',function(e){
+        window.location.reload();
+    })
     </script>
 	<script src="js/app.js"></script>
 </body>
