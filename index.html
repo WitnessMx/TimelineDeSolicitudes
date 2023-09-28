@@ -236,8 +236,7 @@ function og(){return og=Object.assign||function(t){for(var e=1;e<arguments.lengt
                 <tr>
                 <form action="" name="enviar-form">
                     <td style="display: none;" >Sol<input name="Solicitud" type="text" id="form_solicitud" required></td>
-                    <td style="display: none;" >Esta<input name="Estatus" type="text" id="form_estatus" required></td>
-                    <td colspan="2"  style="text-align: center;"><input type="submit" name="boton_completado" id="bot_completado" value="Actualizar"></td>
+                    <td style="display: none;" >Esta<input name="Estatus" type="text" id="form_estatus" required></td>               
                 </form>
                 </tr>
             </tbody>
@@ -432,16 +431,7 @@ var timeline = new vis.Timeline(contenedor1);
                         
                     }                    
                 });
-       
-    const scriptURL='https://script.google.com/macros/s/AKfycbyyZSnbun8LCWgn022Vc5wdUbJ65kRknrh7bJRC5w8Eidn2489T8pWXeGN0R1SXVFQi/exec'                          
-    const form=document.forms['enviar-form']               
-    form.addEventListener('submit',e=>{
-        e.preventDefault()
-            fetch(scriptURL,{method:'POST', body: new FormData(form)})
-            .then(response=>{console.log('Hecho!',response);alert("Estatus Modificado")})
-            .catch(error=>console.log('Error!',error.message))
 
-    })
      
     document.getElementById("id_completo").addEventListener('click',function(e){
         document.getElementById("form_estatus").value=e.target.value;
